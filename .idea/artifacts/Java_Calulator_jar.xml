@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java-Calulator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java_Calulator_jar</output-path>
+    <root id="archive" name="Java-Calulator.jar">
+      <element id="module-output" name="Java-Calulator" />
+    </root>
+  </artifact>
+</component>

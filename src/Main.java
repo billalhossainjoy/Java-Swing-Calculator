@@ -70,8 +70,8 @@ class Calculator extends JFrame implements ActionListener{
         divButton = new JButton(div);
         decButton = new JButton(dec);
         equalButton = new JButton(equal);
-        delButton = new JButton(cel);
-        clrButton = new JButton(del);
+        delButton = new JButton(del);
+        clrButton = new JButton(cel);
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
@@ -141,6 +141,7 @@ class Calculator extends JFrame implements ActionListener{
             if (e.getSource() == numberButtons[i]) textField.setText(textField.getText().concat(String.valueOf(i)));
         }
         if (e.getSource() == decButton) textField.setText(textField.getText().concat("."));
+        if (e.getSource() == clrButton) textField.setText("");
         if (e.getSource() == addButton){
             num1= Double.parseDouble(textField.getText());
             operator = '+';
@@ -183,6 +184,13 @@ class Calculator extends JFrame implements ActionListener{
             }
             textField.setText(String.valueOf(result));
             num1 = result;
+        }
+        if (e.getSource() == delButton){
+            String text = textField.getText();
+            if (text.length() != 0){
+                String newText = text.substring(0,text.length()-1);
+                textField.setText(newText);
+            }
         }
 
 
